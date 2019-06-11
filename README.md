@@ -1,14 +1,18 @@
 # jest-cucumber-translate-to-steps
-Translate feature files to step.js files using the jest-cucumber package 
+Translate feature files to step.js files using the jest-cucumber package and one command
+```
+npm run translate
+```
 
 
 ## Install translator:
-
 ```
 npm install jest-cucumber-translate-to steps --save-dev
 ```
 
+
 ## Add the following config to test/translator/translator.conf.js
+alter paths to match your file
 ```javascript
 module.exports = {
   feature_folders: 'test/features/translator/test.feature',
@@ -16,6 +20,7 @@ module.exports = {
   template_path: 'test/gherkinTranslator/stepTemplate.js'
 }
 ```
+
 
 ## Create your testing template in test/translator/template.js
 ### I like to use this version with vue-test-utils and jest
