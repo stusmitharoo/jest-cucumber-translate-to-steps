@@ -1,5 +1,6 @@
 # jest-cucumber-translate-to-steps
-Translate feature files to step.js files using the jest-cucumber package and one command
+Translate feature files to step.js files using the jest-cucumber package
+write youre feature file and then run
 ```
 npm run translate
 ```
