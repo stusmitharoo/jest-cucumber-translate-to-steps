@@ -1,6 +1,6 @@
 # jest-cucumber-translate-to-steps
 Translate feature files to step.js files using the jest-cucumber package
-write youre feature file and then run
+write your'e feature file update the feature_folder in translator.conf.js and then run
 ```
 npm run translate
 ```
@@ -8,7 +8,7 @@ npm run translate
 
 ## Install translator:
 ```
-npm install jest-cucumber-translate-to steps --save-dev
+npm install jest-cucumber-translate-to-steps --save-dev
 ```
 
 
@@ -16,7 +16,7 @@ npm install jest-cucumber-translate-to steps --save-dev
 alter paths to match your file
 ```javascript
 module.exports = {
-  feature_folders: 'test/features/translator/test.feature',
+  feature_folder: 'ADD_PATH_TO_FEATURE_FILE',
   output_folder: 'test',
   template_path: 'test/translator/template.js'
 }
@@ -31,7 +31,7 @@ import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
 import Vue from 'vue'
 import merge from 'lodash.merge'
-import Component from '../../src/components/helpers/ADD_PATH_TO_COMPONENT_HERE'
+import Component from '../../src/components/ADD_PATH_TO_COMPONENT_HERE'
  
 const feature = loadFeature('test/features/ADD_PATH_TO_FEATURE_FILE_HERE')
 
@@ -70,6 +70,6 @@ function createWrapper (overrides) {
 ## add translate script to package.json
 ```
 "script": {
-  "translate": "jest-cucumber-translate-to-steps"
+  "translate": "node node_modules/jest-cucumber-translate-to-steps/src"
 }
 ```

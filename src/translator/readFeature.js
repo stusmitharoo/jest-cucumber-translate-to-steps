@@ -37,7 +37,7 @@ const parseFeature = (ast) => {
 }
 exports.readFile = (featureFilePath) => {
   if (!fs.existsSync(featureFilePath)) {
-      throw new Error("Feature file not found")
+      throw new Error("feature_folder path not found")
   }
   const featureText = fs.readFileSync(featureFilePath, 'utf8')
   const ast = new Gherkin.Parser().parse(featureText)

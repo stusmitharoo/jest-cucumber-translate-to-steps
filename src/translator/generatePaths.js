@@ -10,7 +10,7 @@ const folderPath = (outputFolder, inputPath) => {
 exports.createFile = (outputFolder, inputPath) => {
   const folder = folderPath(outputFolder, inputPath)
   const ext = '.step.js'
-  const file = folder.concat('/', ext)
+  const file = folder.concat(ext)
   return file
 }
 

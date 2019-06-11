@@ -15,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/stusmitharoo/jest-cucumber-translate-to-steps/issues"
   },
-  "homepage": "https://github.com/stusmitharoo/jest-cucumber-translate-to-steps#readme",
-  "dependencies": {
-    "lodash.merge": "^4.6.1"
-  }
+  "homepage": "https://github.com/stusmitharoo/jest-cucumber-translate-to-steps#readme"
 }
