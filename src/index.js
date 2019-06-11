@@ -1,5 +1,5 @@
 "use strict"
-const Config = require('../../test/translator/translator.conf.js')
+const Config = require('../../../test/translator/translator.conf.js')
 const getFeatureFile = require('./translator/readFeature')
 const generatePaths = require('./translator/generatePaths')
 const generateCode = require('./translator/generateCode')
