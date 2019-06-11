@@ -18,7 +18,7 @@ alter paths to match your file
 module.exports = {
   feature_folders: 'test/features/translator/test.feature',
   output_folder: 'test',
-  template_path: 'test/gherkinTranslator/stepTemplate.js'
+  template_path: 'test/translator/template.js'
 }
 ```
 
