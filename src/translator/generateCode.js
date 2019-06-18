@@ -15,7 +15,7 @@ const escapeRegexCharacters = (text) => {
       .replace(/\)/g, '\\)')
 }
 const convertStepTextToRegex = (step) => {
-  const stepText = escapeRegexCharacters(step.stepText)
+  let stepText = escapeRegexCharacters(step.stepText)
   let match
   while (match = stepTextArgumentRegex.exec(stepText)) {
       stepText = stepText.replace(new RegExp(match[1], 'g'), '(.*)')
@@ -23,8 +23,8 @@ const convertStepTextToRegex = (step) => {
   return "/^" + stepText + "$/"
 }
 const getStepArguments = (step) => {
-  const stepArgumentVariables = []
-  const index = 0
+  let stepArgumentVariables = []
+  let index = 0
   while (match = stepTextArgumentRegex.exec(step.stepText)) {
       stepArgumentVariables.push("arg" + index)
       index++
@@ -50,7 +50,7 @@ const getStepMatcher = (step) => {
   return stepMatcher
 }
 const getStepKeyword = (steps, stepPosition) => {
-  const currentStep = steps[stepPosition]
+  let currentStep = steps[stepPosition]
   const containsConjunction = (keyword) => {
     return ['but', 'and'].indexOf(keyword) !== -1
   }
@@ -70,13 +70,13 @@ const getStepKeyword = (steps, stepPosition) => {
   }, currentStep.keyword)
 }
 const generateStepCode = (steps, stepPosition) => {
-  const step = steps[stepPosition]
+  let step = steps[stepPosition]
   return stepTemplate(getStepKeyword(steps, stepPosition), 
     getStepMatcher(step), 
     getStepArguments(step))
 }
 const generateScenarioCode = (scenario) => {
-  var stepsCode
+  let stepsCode
   stepsCode = scenario.steps.map((step, index) => {
     return generateStepCode(scenario.steps, index)
   })
