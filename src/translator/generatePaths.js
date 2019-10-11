@@ -9,7 +9,7 @@ const folderPath = (outputFolder, inputPath) => {
 
 exports.createFile = (outputFolder, inputPath) => {
   const folder = folderPath(outputFolder, inputPath)
-  const ext = '.step.js'
+  const ext = '.steps.js'
   const base = path.basename(inputPath).split('.').slice(0, 1).toString()
   const file = folder.concat('/', base).concat(ext)
   return file
